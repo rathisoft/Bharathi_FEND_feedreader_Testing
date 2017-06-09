@@ -23,4 +23,4 @@ Initial Entries:
 New Feed Selection:
 * Feed content changes when new feed is selected
 
-To view the feedreader testing site on github pages go to http://rathisoft.github.io/FEND-Feedreader-Testing
+To view the feedreader testing site on github pages go to https://rathisoft.github.io/Bharathi_FEND_feedreader_Testing/.
