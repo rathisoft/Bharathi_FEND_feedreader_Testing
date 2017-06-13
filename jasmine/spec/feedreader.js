@@ -28,8 +28,8 @@ $(function() {
          */
         it('URL Validation -> ensure the feeds to not have blank / empty URL', function() {
             allFeeds.forEach(function(feed) {
-                expect(feed.url).toBeDefined(); // check for a properly defined URL
-                expect(feed.url.length).not.toBe(0); // check for empty URL
+                expect(feed.url).toBeDefined();
+                expect(feed.url.length).not.toBe(0);
                 expect(feed.url).not.toBe(''); // Additional check for empty string
             });
         });
@@ -40,9 +40,9 @@ $(function() {
          */
         it('Name validation -> ensure the feeds to not have blank / empty names', function() {
             allFeeds.forEach(function(feed) {
-                expect(feed.name).toBeDefined(); // check for a properly defined name
-                expect(typeof feed.name).toEqual('string'); // checks whether the name element is a string or not
-                expect(feed.name.length).toBeGreaterThan(0); // checks whether the name string is empty or not by mandating its length to be greater than zero
+                expect(feed.name).toBeDefined();
+                expect(typeof feed.name).toEqual('string');
+                expect(feed.name.length).toBeGreaterThan(0);
                 expect(feed.name).not.toBe(''); // Additional check for empty string
             });
         });
@@ -60,24 +60,22 @@ $(function() {
         });
 
         /* Menu validation Part 2 (This is the fifth test) --> a test that ensure changes in
-         * visibility when the hamburger menu icon is clicked.
+         * visibility when the menu icon is clicked.
          */
         it('Menu validation Part 2 -> ensure menu changes visibility when the menu icon is clicked', function() {
             var menu = $('.menu-icon-link');
-
-.
-            menu.click();             // Test to check whether menu gets displayed or not when the hamburger menu icon is clicked
+            menu.click();             // Test whether menu gets displayed or not
             expect($('body').hasClass('menu-hidden')).toBe(false);
 
 
-            menu.click();             // Test to check whether menu gets hidden or not when the hamburger menu icon is clicked again
+            menu.click();             // Test whether menu gets hidden or not
             expect($('body').hasClass('menu-hidden')).toBe(true);
         });
     });
 
         /* Initial entries (This is the sixth test) a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
-         * a single .entry element within the .feed container.
+         * a single .entry element within the .feed container..
          */
     describe('Initial Entries', function() {
 
