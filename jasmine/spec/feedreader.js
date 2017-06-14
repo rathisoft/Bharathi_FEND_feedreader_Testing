@@ -85,8 +85,11 @@ $(function() {
             });
         });
 
-        it('Feed Entry validation -> esnure there is at least a single entry element within the feed container', function() {
-            expect($('.entry').length).toBeGreaterThan(0);
+        it('Feed Entry validation -> esnure there is at least a single entry element within the feed container', function(done) {
+            document.querySelectorAll('.parent-class .child-class');
+            var entryLen = ($('.feed .entry').length)  //$('.entry').length;
+            expect(entryLen).toBeGreaterThan(0);
+            done();
         });
     });
         /* New Feed Selection valiation (This is the seventh test) -> a test that ensures when a new feed is loaded
@@ -94,8 +97,8 @@ $(function() {
          */
     describe('New Feed Selection', function() {
 
-        var $feedFirst;
-        var $feedSecond;
+        var feedFirst;
+        var feedSecond;
 
         beforeEach(function(done) {
             loadFeed(0, function() {
