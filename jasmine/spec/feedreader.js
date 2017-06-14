@@ -86,8 +86,8 @@ $(function() {
         });
 
         it('Feed Entry validation -> esnure there is at least a single entry element within the feed container', function(done) {
-            document.querySelectorAll('.parent-class .child-class');
-            var entryLen = ($('.feed .entry').length)  //$('.entry').length;
+            //document.querySelectorAll('.feed .entry');
+            var entryLen = ($('.feed .entry').length);  //$('.entry').length;
             expect(entryLen).toBeGreaterThan(0);
             done();
         });
